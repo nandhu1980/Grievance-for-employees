@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editi</title>
+</head>
+<body>
+    <h1>WALCOME TO EDITI VIWE SITE</h1>
+    <form  action="customerupdate" method="post">
+        {% csrf_token %}
+        <table>
+            {% for i in data %}
+            <tr>
+                <td>ID</td>
+                <td><input type="text" value="{{i.id}}" name="id" readonly></td></tr>
+            <tr>
+                <td>NAME</td>
+                <td><input type="text" value="{{i.Name}}" name="Name" required></td></tr>
+            <tr>
+                <td>MOBLENO</td>
+                <td><input type="text" value="{{i.Mobilno}}" name="Mobilno" required></td></tr>
+            <tr><td>MAIL</td>
+                <td><input type="text" value="{{i.Email}}" name="Email" required></td></tr>
+            <tr>
+                <th><input type="submit" value="updata"></th></tr>
+                {% endfor %}
+        </table>
+    </form>
+ 
+</body>
+</html>

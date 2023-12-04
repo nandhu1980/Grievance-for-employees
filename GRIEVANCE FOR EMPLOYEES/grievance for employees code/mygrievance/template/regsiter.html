@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regidter</title>
+</head>
+    <body>
+        {% include 'adminlink.html' %}
+        <form action="empy" method="post">
+        {% csrf_token %}
+        <h1><center>EMPLOYEES REGISTRATION</center></h1>
+    <table>
+            {{myform.as_table}}
+            <tr>
+                <td><input type="submit" value="register"></input></td></tr>
+        </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPLY</title>
+</head>
+<body>
+    {% include 'adminlink.html' %}
+    <h1><center>COMPAINT REPLY</center></h1>
+    <form action="replay2" method="GET">
+    <table>
+        <tr><td>complaint ID</td><td><input type="text" name="id" value="{{id}}" readonly></td></tr>
+        <tr><td>replay</td><td><textarea name="replay" id="" cols="15" rows="5"></textarea></td></tr>
+        <tr>
+            <td><input type="submit" value="REPLAY"></input></td></tr>
+    </table>
+    </form>
+</body>
+</html>

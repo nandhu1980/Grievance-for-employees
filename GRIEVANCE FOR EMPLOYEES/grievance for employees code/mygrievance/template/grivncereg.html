@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'emplink.html' %}
+    <form action="complaint1" method="post">
+        {% csrf_token %}
+        <h1><center>COMPAINT REGISTRATION</center></h1>
+        <center><table>
+            <tr><td>Employee ID</td><td><input type="text" name="empid" value="{{empid}}" readonly></td></tr>
+
+            <tr><td>Employee Name</td><td><input type="text" name="Name" value="{{name}}" readonly></td></tr>
+            <tr><td>complaint</td><td><textarea name="complaint" id="" cols="15" rows="5"></textarea></td></tr>
+            <tr>
+                <td><input type="submit" value="COMPAINT"></input></td></tr>
+        </table></center>
+        </form> 
+</body>
+</html>

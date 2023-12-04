@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+</head>
+<body>
+    <H1><CENTER>ADMIN</CENTER></H1>
+    {% include 'link.html' %}
+ <form action="adminlog" method="post">
+    {% csrf_token %}
+    <center>
+         <table>
+            <table border="3">
+        <tr>
+            <td><label>USER NAME</label></td>
+            <td><input type="text" name="name"></td></tr>
+        <tr>
+            <td><label>PASSWORD</label></td>
+            <td><input type="text" name="p"></td></tr>
+            <tr>
+                <td><input type="submit" value="login"></td>
+            </tr>
+        </table>
+    </center>
+</form>
+</body>
+</html>
